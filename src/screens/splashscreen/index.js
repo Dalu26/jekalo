@@ -14,7 +14,7 @@ const SplashScreen = ({ navigation }) => {
 
     const checkVitals = async () => {
         setTimeout(() => {
-            // navigation.replace('Tabs', {screen: 'Home'})
+            navigation.replace('Drawer')
         }, 2500);
     }
 
@@ -65,7 +65,7 @@ const SplashScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     wrapper: {
-        backgroundColor: 'rgba(255, 81, 0, 1)',
+        backgroundColor: 'rgba(76, 178, 16, 1)',
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
