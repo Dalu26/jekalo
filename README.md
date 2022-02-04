@@ -35,7 +35,7 @@ git clone https://github.com/Dalu26/jekalo.git
 ### Switch to the directory
 
 ```sh
-cd mpharma
+cd jekalo
 ```
 
 ### Install the dependencies

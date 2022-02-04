@@ -136,10 +136,10 @@ const Characters = ({ navigation }) => {
     return (
         <SafeAreaView style={container}>
             <StatusBar 
-                    translucent={true} 
-                    barStyle='dark-content' 
-                    backgroundColor="rgba(0,0,0,0)" 
-                />
+                translucent={true} 
+                barStyle='dark-content' 
+                backgroundColor="rgba(0,0,0,0)" 
+            />
                 <View style={[flexRow, header]}>
                     <Animatable.View  
                         animation={'swing'}
