@@ -1,5 +1,4 @@
 import React from 'react';
-import { Easing } from 'react-native';
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
 import Character from '../screens/character/index';
 
@@ -7,25 +6,18 @@ import Episode from '../screens/episode/index';
 
 
 const Stack = createStackNavigator();
-const transitionSpec = { 
-        open: {animation: 'timing', config: {
-            duration: 500, easing: Easing.inOut(Easing.ease)
-        }}, 
-        close: {animation: 'timing', config: {
-            duration: 400, easing: Easing.inOut(Easing.ease)
-        }}
-}
 
 export function CharacterStack(){
     return(
         <Stack.Navigator 
-            initialRouteName="Character" 
+            initialRouteName="index" 
             options={{ gestureEnabled: true }}>
             <Stack.Screen 
-                name="Character" 
+                name="index" 
                 component={Character} 
                 options={{ headerShown: false, 
-                    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} 
+                    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS 
+                }} 
             />
         </Stack.Navigator>
     );
@@ -35,10 +27,10 @@ export function CharacterStack(){
 export function EpisodeStack(){
     return(
         <Stack.Navigator 
-            initialRouteName="Episode" 
+            initialRouteName="index" 
             options={{gestureEnabled: true}}>
             <Stack.Screen 
-                name="Episode" 
+                name="index" 
                 component={Episode} 
                 options={{headerShown: false}} 
             />
