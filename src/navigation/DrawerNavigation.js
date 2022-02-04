@@ -2,8 +2,7 @@ import React from 'react';
 import {
   createDrawerNavigator,
   DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem,
+  DrawerItemList
 } from '@react-navigation/drawer';
 import { EpisodeStack, CharacterStack } from './StackNavigation';
 
