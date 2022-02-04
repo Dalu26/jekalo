@@ -1,14 +1,9 @@
 import React from 'react';
 import { Easing } from 'react-native';
 import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
-import Home from '../screens/home/index';
-import Details from '../screens/home/details';
+import Character from '../screens/character/index';
 
-import More from '../screens/more';
-import CreateProduct from '../screens/more/createProduct';
-import Inventory from '../screens/more/inventory';
-import Edit from '../screens/more/edit';
-import Trash from '../screens/more/trash';
+import Episode from '../screens/episode/index';
 
 
 const Stack = createStackNavigator();
@@ -21,65 +16,31 @@ const transitionSpec = {
         }}
 }
 
-export function HomeStack(){
+export function CharacterStack(){
     return(
         <Stack.Navigator 
-            initialRouteName="Home" 
+            initialRouteName="Character" 
             options={{ gestureEnabled: true }}>
             <Stack.Screen 
-                name="Homescreen" 
-                component={Home} 
+                name="Character" 
+                component={Character} 
                 options={{ headerShown: false, 
                     cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} 
-            />
-            <Stack.Screen 
-                name="details" 
-                component={Details} 
-                options={() => ({ headerShown: false,
-                    gestureEnabled: false, 
-                    transitionSpec: transitionSpec, 
-                    cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS,
-                })}
             />
         </Stack.Navigator>
     );
 }
 
 
-export function MoreStack(){
+export function EpisodeStack(){
     return(
         <Stack.Navigator 
-            initialRouteName="More" 
+            initialRouteName="Episode" 
             options={{gestureEnabled: true}}>
             <Stack.Screen 
-                name="Morescreen" 
-                component={More} 
+                name="Episode" 
+                component={Episode} 
                 options={{headerShown: false}} 
-            />
-            <Stack.Screen 
-                name="Inventory" 
-                component={Inventory} 
-                options={{ headerShown: false, 
-                cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} 
-            />
-            <Stack.Screen 
-                name="CreateProduct" 
-                component={CreateProduct} 
-                options={{ headerShown: false, 
-                    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} 
-            />
-            <Stack.Screen 
-                name="Edit" 
-                component={Edit} 
-                options={{ headerShown: false, 
-                    transitionSpec: transitionSpec, 
-                    cardStyleInterpolator: CardStyleInterpolators.forModalPresentationIOS }} 
-            />
-            <Stack.Screen 
-                name="Trash" 
-                component={Trash} 
-                options={{ headerShown: false, 
-                cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS }} 
             />
         </Stack.Navigator>
     );
