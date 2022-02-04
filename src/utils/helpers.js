@@ -1,3 +1,20 @@
+import network from './network'
+
+export const getCharacters = (limitNumber) => {
+    return new Promise((resolve, reject) => {
+      network.get(`/characters?limit=${limitNumber}`).then(response => {
+        resolve(response)
+      }).catch(err => reject(err))
+    })
+}
+
+export const getEpisodes = () => {
+  return new Promise((resolve, reject) => {
+    network.get('/episodes').then(response => {
+      resolve(response)
+    }).catch(err => reject(err))
+  })
+}
 
 export const titleCase = (str) => {
     return str.replace(
